@@ -1,0 +1,19 @@
+Em segundo lugar, quando você usa var, você pode declarar a mesma variável quantas vezes quiser, mas com letvocê não pode. O seguinte funcionaria:
+
+var myName = 'Chris';
+var myName = 'Bob';
+Copiar para área de transferência
+Mas o seguinte lançaria um erro na segunda linha:
+
+let myName = 'Chris';
+let myName = 'Bob';
+Copiar para área de transferência
+Você teria que fazer isso em vez disso:
+
+let myName = 'Chris';
+myName = 'Bob';
+Copiar para área de transferência
+Novamente, esta é uma decisão de linguagem sensata. Não há razão para redeclarar variáveis ​​- isso apenas torna as coisas mais confusas.
+
+Por essas e outras razões, recomendamos que você use let em seu código, em vez de var. Não há motivo para usar var, a menos que você precise dar suporte ao Internet Explorer 10 ou anterior com seu código.
+- O var tem problemas em seu design, o let mais recente resolve esses prolemas.

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anatomia CSS</title>
+    <style>
+        .selector {
+            border: solid 5px rgb(50, 200, 250);
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            font-size: 40px;
+            width: calc(90% - 100px);
+            margin: auto;
+            /* A largura é 90% do disponivel para .selector menos 100px */
+        }
+        
+        /*USANDO UMA PSEUDO-CLASSE (COMO SE FOSSE UM ESTADO)-> :*/
+        .selector:hover{
+            color: black;
+            background-color: #fff;
+        }
+        /*USANDO UM PSEUDO-ELEMENTO (UM "ELEMENTO" DA CLASSE SELECTOR) -> ::*/
+        .selector::first-letter {
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-decoration-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="selector">conteúdo</div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <div id="meu-elemento" class="classe ">
+          Olá
+     </div>
+     <button onclick="muda()">Click Here</button>
+     <script>
+          const meuElemento = document.getElementById('meu-elemento');
+          // meuElemento.classList -> lista de classes
+          meuElemento.classList.add('novo-estilo')//adiciona mais outro estilo
+
+          console.log(meuElemento.classList.value); //retorna as classes de meuElemento
+          
+          function muda() {
+               meuElemento.classList.remove('classe');
+               meuElemento.classList.toggle('dark-mode');
+               console.log(meuElemento.classList.value);
+               // o toogle faz o seguinte: verifica se eu tenho a classe passada como parametro no objetoHTml referenciado, se tiver, o js remove esta classe, se não tiver adiciona esta classe
+          }
+     </script>
+     <style>
+          .classe {
+               color: green;
+          }
+          .dark-mode {
+               background-color: black;
+               color: white;
+          }
+     </style>
+</body>
+</html>

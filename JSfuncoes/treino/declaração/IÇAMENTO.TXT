@@ -1,0 +1,15 @@
+
+//IÇAMENTO
+//POSSO USAR UMA VARIÁVEL EDEPOIS DECLARALÁ, USANDO SOMENTE O VAR
+
+myName = 'Chris';
+
+function logName() {
+  console.log(myName);
+}
+
+logName();
+
+var myName;
+Copiar para área de transferência
+Observação: isso não funcionará ao digitar linhas individuais em um console JavaScript, apenas ao executar várias linhas de JavaScript em um documento da web

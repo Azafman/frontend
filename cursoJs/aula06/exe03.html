@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: rgb(255, 255, 255);
+            color: white;
+        }
+        h1{
+            color: aqua;
+        }
+    </style>
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1 align="center">Olá, Mundo!</h1>
+    <p>Já me livrei da maldição</p>
+    <script>
+        /*
+        var n1 = Number.parseInt(window.prompt('Digite um número: '))
+        var n2 = Number.parseInt(window.prompt('Digite outro número: '))
+        */
+        var n1 = Number(window.prompt('Digite um número: '))
+        var n2 = Number(window.prompt('Digite um número: '))
+
+        var soma = n1 + n2
+        //typeof soma == number
+        soma.toString()
+        //typeof soma == string
+
+        window.alert('A soma dos números digitados é de ' + soma)
+        var soma2 = prompt('Digite outro número:')
+        let result = soma + soma2
+        window.confirm(`A soma dos strings ${soma} e ${soma2} equivale a: ${result}`)
+
+    </script>
+</body>
+</html>

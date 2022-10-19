@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Quero ver a ação" id="sla" onclick="puxa()">
+    <script>
+        let nome = prompt("Digite seu nome: ")
+        const idade = prompt("Sua idade:")
+        const hobbye = prompt("Gosta de fazer o que:")
+        const hobbye2 = prompt("Outro Hobbie:")
+        let inforPessoal={
+            name: nome,
+            years: idade,
+            gosto: [hobbye,hobbye2],
+            exiba: function(){//essa função é denominada de método do objeto
+                confirm(`Você se chama ${inforPessoal.name}, tem ${inforPessoal.years} anos de idade. Gosta de ${inforPessoal.gosto[0]} e ${inforPessoal.gosto[1]}`)
+            }
+        }
+        let button = document.querySelector('input#sla')
+        function puxa(){
+            inforPessoal.exiba()
+        }
+    </script>
+</body>
+</html>

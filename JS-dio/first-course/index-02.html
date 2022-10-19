@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+          body {
+               background-color: rgb(55, 231, 173);
+               font-family: Verdana, sans-serif;
+               color: white;
+               text-align: center;
+          }
+          input, button {
+               border-radius: 6px;
+               padding: 5px;
+               border: 0.5px solid;
+          }
+          button#adc {
+               background-color: rgb(156, 221, 241);
+               border: 1.5px solid rgb(2, 192, 250);
+               color: rgb(2, 192, 250);
+               font-weight: bold;
+          }
+     </style>
+     <title>Lista de Tarefas</title>
+</head>
+<body>
+
+     <header>
+          <h1>To do List</h1>
+     </header>
+     <section>
+          <input type="text" name="tarefa_name" id="tarefa_id" placeholder="Digite aqui sua tarefa"> 
+          <button type="submit" id="adc" onclick="crie_tarefa()">Adicionar</button>
+     </section>
+     <script src="assets/js/projet-02.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+body{
+    background: rgb(33, 123, 226);
+    font-weight: 500;
+}
+header, footer{
+    text-align: center;
+    color: white;
+}
+section{
+    background: white;
+    width: 600px;
+    padding: 15px 20px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.226);
+}
+section form input{
+    margin-bottom: 20px;
+}
+section form input#nasc {
+    width: 150px;
+}
+
+footer{
+    font-style: italic;   
+}

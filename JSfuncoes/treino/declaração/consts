@@ -1,0 +1,8 @@
+Constantes em JavaScript
+Assim como as variáveis, você pode declarar constantes. São como variáveis, exceto que:
+
+você deve inicializá-los ao declará-los
+você não pode atribuir a eles um novo valor depois de inicializá-los.
+const azaf //vai dar erro
+const azaf=0//Dá certo!
+azaf=1//dps de ter atribuido um const, não posso lhe dar um novo valor, geraria erro!

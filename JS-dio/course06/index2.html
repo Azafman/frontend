@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <div class="primeira-classe segunda-classe">
+          <ul>
+               <li class="opcao">opção 1</li>
+               <li class="opcao">opção 2</li>
+               <li class="opcao">opção 3</li>
+          </ul>
+     </div>
+     <div>azaf</div>
+     <script>
+          console.log(document.querySelectorAll('div.primeira-classe'))
+          /*
+          <div class="primeira-classe segunda-classe">
+          <ul>
+               <li class="opcao">opção 1</li>
+               <li class="opcao">opção 2</li>
+               <li class="opcao">opção 3</li>
+          </ul>
+          </div>
+          */
+         console.log(document.querySelectorAll('div.primeira-classe.segunda-classe'))
+         /*
+         <div class="primeira-classe segunda-classe">
+         <ul>
+              <li class="opcao">opção 1</li>
+              <li class="opcao">opção 2</li>
+              <li class="opcao">opção 3</li>
+         </ul>
+         </div>
+         */
+        console.log(document.querySelectorAll('div'))
+        //querySelectorAll-> seleciona vários elementos ao mesmo tempo
+        //querySelector -> seleciona somente um elemento
+     </script>
+</body>
+</html>

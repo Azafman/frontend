@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de números</title>
+</head>
+<body>
+    <script>
+        var soma = Number(0)
+        var numero 
+        var soma_par = Number(0)
+        var soma_impar = Number(0)
+        for(i=0;i<5;i++)
+        {
+            numero = Number(prompt('Digite um valor: '))
+            soma += numero
+            if(numero%2==0)
+            {
+                soma_par += numero
+            }
+            else
+            {
+                
+                 soma_impar += numero
+            }
+        }
+        document.write(`<h1 align="center">A soma de todos os números digitados equivale a: ${soma}</h1>`)
+        document.write(`<h2 align="center"> A soma dos pares digitados equivale a: ${soma_par}</h2>`)
+        document.write(`<h2 align="center"> A soma dos ímpares digitados equivale a: ${soma_impar}</h2>`)
+    </script>
+</body>
+</html>

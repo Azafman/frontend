@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+    <section>
+        <form action="">
+            <div>
+                <p>Ano de Nascimento: <input type="number" name="txtnumber" id="txtnumber"></p>
+                <p>Sexo:
+                <input type="radio" name="escolha" id="masc" checked> <label for="masc"> Masculino</label>
+                <input type="radio" name="escolha" id="femi"> <label for="femi"> Feminino </label></p>
+                <!--Ao cliclar no nome feminino, eu marco o input radio(isso usando o label)-->
+                <p><input type="button" value="Verificar" id="verificar" onclick="verifique()"></p>
+            </div>
+            <img src="" id="sla" alt="">
+            <div id="res"></div>
+        </form>
+    </section>
+    <footer>
+        <p>&COPY; Curso em Vídeo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
