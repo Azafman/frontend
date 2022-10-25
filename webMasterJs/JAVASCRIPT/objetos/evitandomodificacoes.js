@@ -1,11 +1,10 @@
-//devido ao comportamento dinâmico do JS, tem se as seguintes funções para diminuir e ter controle
+//devido ao comportamento dinâmico do JS, tem se as seguintes funções para diminuir e ter + controle
 
 //Object.preventExtensions
 const produto = Object.preventExtensions({
      nome: 'Qualquer', preco: 1.99, tag: 'promoção'
 })
-// o objeto produto estáprivado de ser extendido, isto é pode ter atributos alterdos e excluídos, somente. 
-// !== de Object.freeze
+// o objeto produto está privado de ser extendido, isto é pode ter atributos alterdos e excluídos, somente. !== de Object.freeze
 produto.nome = 'Borracha'
 produto.validade = '29/10/2022'
 delete produto.tag

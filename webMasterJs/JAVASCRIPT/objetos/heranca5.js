@@ -7,7 +7,7 @@ String.prototype.StringReversa = function () {
      //o this se refere a strnig
      //split separa toda string, inclusive espaços, transformando-a em array
      //o array tem a função de revertere seus indices -> reverse()
-     //join junta toda a string
+     //join junta todo array e transforma novamente em string
 }
 console.log("Escola Cod3r".StringReversa())
 Array.prototype.first = function () {

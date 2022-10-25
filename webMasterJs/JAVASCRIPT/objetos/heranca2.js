@@ -34,7 +34,7 @@ const ferrari = {
 const volvo = {
      modelo: 'V40',
      status(){
-          return `${this.modelo}: ${super.status()}`
+          return `${this.modelo}: ${super.status()}`//chamando o super sem er por classe
           // o método super intencionalmente procura o no prototipo
      }
 }

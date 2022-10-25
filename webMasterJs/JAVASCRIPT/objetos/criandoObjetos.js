@@ -38,9 +38,9 @@ console.log(f1.getSalario(), f2.getSalario())
 const filha = Object.create(null)
 filha.nome = 'Ana'
 console.log(filha)
-const filha2 = Object.create(null)
-filha2.name = 'Mateus'
-console.log(filha2);
+// const filha2 = Object.create()//error
+// const filha2 = Object.create(false)//error
+// filha2.name = 'Mateus'
 
 // Um função famosa que retorna Objeto...
 const fromJSON = JSON.parse('{"info": "Sou um JSON"}')

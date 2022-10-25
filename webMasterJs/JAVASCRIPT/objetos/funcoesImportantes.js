@@ -3,11 +3,10 @@ const minhasInformacoes = {
      idade: 18,
      peso: 65,
 }
-console.log(Object.keys(minhasInformacoes))//retorna um array com as cahves do obeto minhasInformacoes
+console.log(Object.keys(minhasInformacoes))//retorna um array com as chaves do objeto minhasInformacoes
 console.log(Object.keys(minhasInformacoes)[0])
 //sintaxe -> Object.nomFuncao(objetodesejado)
-console.log(Object.values(minhasInformacoes))
-//retorna um array com os valores
+console.log(Object.values(minhasInformacoes))//retorna um array com os valores
 console.log(Object.entries(minhasInformacoes));//retorna um array que em cada indice tem uma chave e um valores respectivos
 
 // Object.entries(minhasInformacoes).forEach(el => {
@@ -19,14 +18,15 @@ Object.entries(minhasInformacoes).forEach(([chave, valor]) => {
 //criando um objeto de forma personalizada: 
 Object.defineProperty(
      minhasInformacoes, //objeto que será usado
-     'dataNascimento'/*nome da chave que será usada*/, { 
-     enumerable: false,//qnd eu escrever todo o objeto genericamente(seja através de values, keys, ou console.log(minhasInformacoes)) no console, esta propriedade será exibida::
-     writable: false,//pode ser modificada
-     value: '01/01/2019'//valor
-}
+     'dataNascimento'/*nome da chave que será usada*/, 
+     { 
+          enumerable: false,//qnd eu escrever todo o objeto genericamente(seja através de values, keys, ou console.log(minhasInformacoes)) no console, esta propriedade será exibida:
+          writable: false,//pode ser modificada
+          value: '01/01/2019'//valor
+     }
 )
 minhasInformacoes.dataNascimento = '09/221'//writable
-console.log(minhasInformacoes)
+console.log(minhasInformacoes)//resultado do enumeralbe
 console.log(minhasInformacoes.dataNascimento)
 
 // Object.assign(EcmaScript 2015)
