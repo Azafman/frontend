@@ -35,8 +35,9 @@ const f2 = criarFuncionario('Maria', 11400, 1)
 console.log(f1.getSalario(), f2.getSalario())
 
 // Object.create
-const filha = Object.create(null)
+const filha = Object.create(Object.prototype)
 filha.nome = 'Ana'
+console.log(Object.getPrototypeOf(filha));
 console.log(filha)
 // const filha2 = Object.create()//error
 // const filha2 = Object.create(false)//error
