@@ -22,9 +22,9 @@ console.log(chavesVariadas, typeof chavesVariadas)
 //      123 => 'Número',
 //      'Número' => 123
 //} object
-chavesVariadas.forEach((el, chave) => console.log(el, chave))//neste caso é possível usar forEach vai entender
+chavesVariadas.forEach((el, chave) => console.log(el, chave))//neste caso é possível usar forEach vai entender KKKK
 console.log(chavesVariadas.has(123))//true
-console.log(chavesVariadas.has('Objeto'))//false -> vai conferir se eu tenho alguma chae com o valor 'Objeto';
+console.log(chavesVariadas.has('Objeto'))//false -> vai conferir se eu tenho alguma chave com o valor 'Objeto';
 console.log(chavesVariadas.size)
 
 chavesVariadas.set(123,'a')//sobrescreve a chave 123
