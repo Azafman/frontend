@@ -1,3 +1,4 @@
+
 class ValidaForm {
   constructor() {
     this.formulario = document.querySelector('.formulario');
@@ -22,22 +23,42 @@ class ValidaForm {
 
   isValid() {
     let valid = true;
+
+    //se tem alguma mensagem de erro remove a mesma
     for(let errorText of this.formulario.querySelectorAll('.error-text')) {
-      console.log(errorText);
       errorText.remove();
     }
-   
+
     for(let campo of this.formulario.querySelectorAll('.validar')) {
+      let nomeCampo = campo.previousElementSibling.innerHTML;
 
       if(!campo.value) {
-        let nomeCampo = campo.previousElementSibling.innerHTML;
         this.createError(campo, `${nomeCampo} não pode ficar em branco`);
         valid = false;
       }
+      if(campo.classList.contains("cpf")) {
+        if(this.validaCPF(campo)) valid = false;
+      }
+      if(campo.classList.contains('usuario')) {
+        this.validityUser(campo, nomeCampo);
+      }
+
+
     }
   }
 
 
+
+  validaCPF(campo) {
+    const cpf = new ValidaCPF(campo.value);
+
+    if(!cpf.valida()) {
+      this.createError(campo, 'CPF INVÁLIDO!');
+      return false;
+    }
+    return true;
+  }
+  
   createError(campo , msg) {
     const divElement = document.createElement('div');
     divElement.innerHTML = msg; 
