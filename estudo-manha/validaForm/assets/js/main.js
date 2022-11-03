@@ -37,17 +37,58 @@ class ValidaForm {
         valid = false;
       }
       if(campo.classList.contains("cpf")) {
-        if(this.validaCPF(campo)) valid = false;
+        if(!this.validaCPF(campo)) valid = false;
+        // se a função retorna false, sua negação será true e por consequência valid receberá false
       }
       if(campo.classList.contains('usuario')) {
-        this.validityUser(campo, nomeCampo);
+        if(!this.validityUser(campo)) valid = false;
+        // se a função retorna false, sua negação será true e por consequência valid receberá false
       }
-
-
+      if(campo.classList.contains('senha')) {
+        if(!this.validatyPassoword(campo)) valid = false;
+      }
+      if(campo.classList.contains('repetir-senha')) {
+        if(!this.validatyPassoword(campo, 'repetir')) valid = false;
+      }
+      
+      
     }
   }
+  validatyPassoword(campo, repete) {
+    let valid = true;
+    if(campo.value.length === 0 ) return valid;
+    if(campo.value.length < 6 || campo.value.length > 12) {
+      this.createError(campo, 'O campo senha deve conter entre 6 à 12 caracteres');
+      valid = false;
+    }
+    if(repete) {
+      if(this.samePassword(campo))
+    }
+    
+    return valid;
+  }
+  samePassword(campo) {
+    const lastSam = campo.parentNode;
+    this.createError(lastSam, )
 
+  }
+  
+  validityUser(campo) {
+    let valid = true;
+    if(campo.value.length === 0 ) return valid;
+    if(campo.value.length < 3 || campo.value.length > 12) {
+      this.createError(campo, 'O campo usuário deve conter entre 3 à 12 caracteres');
+      valid = false;
+    }
+    if(!campo.value.match(/^[]a-zA-Z0-9+$/g)) {
+      //se o campo.value tiver somente letras e números retornará true, caso contrário retornará false. 
+      // se a função retorna false, sua negação será true e por consequência entrará executrá as intruções lhe delegadas.
+      this.createError(campo, 'Usuário deve conter somente letras e/ou números');
+      valid = false;
+    }
 
+    return valid;
+  }
 
   validaCPF(campo) {
     const cpf = new ValidaCPF(campo.value);
