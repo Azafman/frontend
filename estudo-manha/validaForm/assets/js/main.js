@@ -1,10 +1,8 @@
-
 class ValidaForm {
   constructor() {
     this.formulario = document.querySelector('.formulario');
     this.eventos();
   }
-
 
   eventos() {
     this.formulario.addEventListener('submit', e => {
@@ -12,14 +10,17 @@ class ValidaForm {
     });
   }
 
-
   handleSubmit(e) {
     e.preventDefault();
     const camposValidos = this.isValid();
     
+    if(camposValidos) {
+      this.formulario.submit();    
+      console.log('Formulário enviado.');
+      return;
+    }
     console.log('Formulário não enviado !');
   }
-
 
   isValid() {
     let valid = true;
@@ -50,9 +51,8 @@ class ValidaForm {
       if(campo.classList.contains('repetir-senha')) {
         if(!this.validatyPassoword(campo, 'repetir')) valid = false;
       }
-      
-      
     }
+    return valid;
   }
   validatyPassoword(campo, repete) {
     let valid = true;
@@ -62,14 +62,17 @@ class ValidaForm {
       valid = false;
     }
     if(repete) {
-      if(this.samePassword(campo))
+      if(!this.samePassword(campo)) valid = false;
     }
     
     return valid;
   }
   samePassword(campo) {
-    const lastSam = campo.parentNode;
-    this.createError(lastSam, )
+    if(document.querySelector('.senha').value === campo.value) return true;
+    
+    this.createError(campo, 'Senha e repetir senha devem ser iguais.');
+    this.createError(this.formulario.querySelector('.senha'), 'Senha e repetir senha devem ser iguais.');
+    return false;
 
   }
   
@@ -80,7 +83,7 @@ class ValidaForm {
       this.createError(campo, 'O campo usuário deve conter entre 3 à 12 caracteres');
       valid = false;
     }
-    if(!campo.value.match(/^[]a-zA-Z0-9+$/g)) {
+    if(!campo.value.match(/^[a-zA-Z0-9]+$/g)) {
       //se o campo.value tiver somente letras e números retornará true, caso contrário retornará false. 
       // se a função retorna false, sua negação será true e por consequência entrará executrá as intruções lhe delegadas.
       this.createError(campo, 'Usuário deve conter somente letras e/ou números');
@@ -105,18 +108,6 @@ class ValidaForm {
     divElement.innerHTML = msg; 
     divElement.classList.add('error-text');
     campo.insertAdjacentElement('afterend', divElement);
-
-    /*
-    Element.insertAdjacentElement()
-    - O insertAdjacentElement()método da Element interface insere um determinado nó de elemento em uma determinada posição em relação ao elemento sobre o qual é invocado.
-    position
-    Uma string representando a posição relativa ao targetElement; deve corresponder (sem distinção entre maiúsculas e     minúsculas) uma das seguintes strings:
-
-    'beforebegin': Antes do targetElementpróprio.
-    'afterbegin': Logo dentro do targetElement, antes de seu primeiro filho.
-    'beforeend': Apenas dentro do targetElement, após seu último filho.
-    'afterend': Após o targetElementpróprio
-    */
 
   }
 }

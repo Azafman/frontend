@@ -16,5 +16,5 @@ function carregaPagina(el) {
           // console.log(await html.text(), html);
      })
      .then( conteudo => document.querySelector('.insira-aqui').innerHTML += conteudo)
-     .catch(console.warn);//captura o erro (error-> amarelo, log -> normal, warn -> amaraleo)
+     .catch(console.warn);//captura o erro (error-> vermelho, log -> normal, warn -> amaraleo)
 }

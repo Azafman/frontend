@@ -1,4 +1,5 @@
-// Antes de promessas sempre se trabalhou assim:
+// Antes de promessas sempre se trabalhou assim: 
+     // com callback e não promise=
 const request = obj => {
      const xhr = new XMLHttpRequest();
      xhr.open(obj.method, obj.url);
