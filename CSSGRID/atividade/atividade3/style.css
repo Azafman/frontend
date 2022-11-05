@@ -1,0 +1,53 @@
+* {
+    border: 1px solid black;
+}
+body {
+    margin: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+    display: grid;
+    gap: 10px 0;
+}
+.cabecalho {
+    border: none;
+    display: flex;    
+    flex-direction: column;
+}
+.cabecalho > section {
+    margin-top: 10px;
+}
+section.cabec {
+    padding: 20px 0;
+}
+section.cabec2 {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cabec2 > .itens {
+    padding: 40px;    
+}
+.corpo {
+    display: flex;
+    flex-direction: column;
+}
+.
+.info {
+    
+}
+.info > ul {
+    list-style-type: none;
+    height: 230px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.info li {
+    flex: 1 1 100vw;
+    max-width: 19% !important;
+    height: 50%;
+    border:1px solid black; 
+}
+.rodape {
+    
+}
