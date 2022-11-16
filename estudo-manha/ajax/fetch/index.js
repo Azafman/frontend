@@ -3,7 +3,7 @@
 const request = obj => {
      const xhr = new XMLHttpRequest();
      xhr.open(obj.method, obj.url);
-     xhr.send();//como o método usado será o GET então .send() pode ser executado sem parametro, porém se o método fosse post, eu deveria especificar o parametro de .send().
+     xhr.send();//como o método usado será o GET então .send() pode ser executado sem parametro, porém se o método fosse post, eu deveria especificar o parametro de .send(). O parametro de send() seria o que eu estaria empurrando, exemplo dados
 
      xhr.onreadystatechange = e => {
           if(xhr.readyState === 4 && xhr.status >= 200 && xhr.status < 300) obj.sucess(xhr.responseText);

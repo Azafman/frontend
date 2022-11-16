@@ -1,6 +1,6 @@
 (function() {
      const reqXhr = new XMLHttpRequest();
-     reqXhr.responseType = 'json'
+     reqXhr.responseType = 'json';
      reqXhr.onreadystatechange = function () {
           if(reqXhr.readyState == 4 && reqXhr.status == 200) {
                // console.log(JSON.parse(reqXhr.response));
