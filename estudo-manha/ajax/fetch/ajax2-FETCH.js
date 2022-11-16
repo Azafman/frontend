@@ -8,7 +8,7 @@ document.addEventListener('click', e => {
      }
 });
 function carregaPagina(el) {
-     //o 1° then só será acessado quando a requisição estiver concluída ready. Como sef fosse xhr.readyState === 4.O parametro de then é o objeto da requisição. Como se fosse xmlhttprequest() concluída, com as informações da requisição.
+     //o 1° then só será acessado quando a requisição estiver concluída ready. Como sef fosse xhr.readyState === 4.O parametro da função de then é o objeto da requisição. Como se fosse xmlhttprequest() concluída, com as informações da requisição.
      fetch(el)
      .then(async html => {
           if(html.status !== 200) throw new Error(`ERROR ${html.status} NOSSO`);
