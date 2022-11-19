@@ -1,0 +1,26 @@
+{
+  "name": "estudymy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exe.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babelTodaHR" : "babel ./exe.js -o ./bundle.js --presets=@babel/env -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Azafman/estudyMy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Azafman/estudyMy/issues"
+  },
+  "homepage": "https://github.com/Azafman/estudyMy#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2"
+  }
+}

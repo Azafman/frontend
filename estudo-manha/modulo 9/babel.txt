@@ -1,0 +1,20 @@
+muitos usuários usam navegadores que não suportam recursos das ultimas versões do ecmascript, ou seja, o código deixaria de rodar. Para solução deste problema criou-se o babel, um tradutor de código com recursos modernos para código antig
+
+npm init -y -> Inicia o gerenciador de pacotes do nodeJs na pasta local
+npm install --save-dev @babel/cli @babel/preset-env @babel/core -> instalar o babel
+npx babel exe.js -o bundle.js --presets=@babel/env -> transpila o código "moderno" de exe.js e cria um arquivo com um código antigo bundle.js
+
+- Para fazer com que toda vez que eu mude o código de exe.js, o de bundle.js seja atualizado no "modo de antigo", os seguintes passos são necessários: 
+1° em package.json mude:
+{
+  "name": "estudymy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exe.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babelTodaHR" : "babel ./exe.js -o ./bundle.js --presets=@babel/env -w"
+  },...
+}
+2° no terminal:
+npm run babelTodaHR
