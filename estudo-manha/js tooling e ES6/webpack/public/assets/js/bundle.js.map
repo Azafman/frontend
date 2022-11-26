@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":"AAAqB,CAAC,EAAE,EAAE,EAAE,GAAG,IAChBA,SAAQ,SAAAC,GAClBC,QAAQC,IAAO,EAAHF,EACjB","sources":["webpack://webpack/./src/index.js"],"sourcesContent":["let arrayOfNumbers = [2,8,3,22,16];\r\narrayOfNumbers.forEach(el => {\r\n     console.log(el*2);\r\n})\r\n"],"names":["forEach","el","console","log"],"sourceRoot":""}
